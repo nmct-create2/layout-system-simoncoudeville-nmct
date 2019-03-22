@@ -26,12 +26,6 @@ html {
  * Customize the background color to match your design.
  */
 
-::-moz-selection {
-    background: #e85e00;
-    color: white;
-    text-shadow: none;
-}
-
 ::selection {
     background: #e85e00;
     color: white;
@@ -162,10 +156,44 @@ a:focus {
 \*------------------------------------*/
 
 /*
-    Object: Object name
+    Objects: Row
     ---
-    Object description
+    Creates a horizontal row that stretches the viewport and adds padding around children
 */
+
+.o-row {
+    padding: 24px 24px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.o-row--primary {
+    background-color: #e85e00;
+    color: white;
+}
+
+.o-row--dark {
+    background-color: #111;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .o-row--lg {
+        padding: 48px 48px 24px;
+    }
+}
+
+/*
+    Objects: Container
+    ---
+    Creates a horizontal container that sets de global max-width
+*/
+
+.o-container {
+    width: 100%;
+    max-width: 90em;
+    margin: 0 auto;
+}
 
 /*------------------------------------*\
   #COMPONENTS
@@ -189,6 +217,18 @@ a:focus {
 
 .u-max-width-sm {
     max-width: 36em;
+}
+
+.u-max-width-md {
+    max-width: 45em;
+}
+
+.u-max-width-lg {
+    max-width: 60em;
+}
+
+.u-max-width-xl {
+    max-width: 75em;
 }
 
 /*
